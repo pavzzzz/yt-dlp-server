@@ -16,7 +16,7 @@ def download():
     output_path = os.path.join(tmp_dir, f'{uuid.uuid4()}.%(ext)s')
     ydl_opts = {
         'outtmpl': output_path,
-        'format': 'best[ext=mp4]/best',
+        'format': 'best/bestvideo+bestaudio',
         'quiet': True,
         'http_headers': {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
